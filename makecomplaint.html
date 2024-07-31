@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            COMPLAINT
+        </title>
+        <link rel="icon" href="APSE.png" type="image/icon type">
+        <style>
+            body {
+                background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Emblem_of_Andhra_Pradesh.svg/1200px-Emblem_of_Andhra_Pradesh.svg.png");
+                background-repeat: no-repeat;
+                background-size: 520px 550px;
+                background-position: center;
+                height: 700px;
+                background-color: rgb(215, 243, 245);
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+            .container {
+                position: absolute;
+                align-items: center;
+                background-position: center;
+                width: auto;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                z-index: 1;
+                margin-top: 100px;
+            }
+            .container::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                backdrop-filter: blur(7px);
+                border-radius: 15px;
+                background-image: inherit;
+                z-index: -1;
+            }
+            
+            .button-group {
+                display: flex;
+                justify-content: center;
+            }
+            input[type=text]
+            {
+                
+                max-width: 300px;
+                border-radius: 7px;
+            }
+            button
+            {
+                width: 100px;
+                height: 25px;
+                border-radius: 7px;
+                background-color: skyblue;
+            }
+            textarea
+            {
+                
+                max-width: 300px;
+                border-radius: 7px;
+            }
+            label
+            {
+                width: 200px;
+                display:inline-block;
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            function generateAndNavigate(event) {
+                event.preventDefault(); 
+                const randomNumber = Math.floor(100000 + Math.random() * 900000);
+                const name = document.getElementById('Name').value;
+                const designation = document.querySelector('input[name="designation"]').value;
+                const district = document.querySelector('input[name="district"]').value;
+                const mandal = document.querySelector('input[name="mandal"]').value;
+                const complaint = document.querySelector('textarea').value;
+    
+                const params = new URLSearchParams({
+                    name: name,
+                    designation: designation,
+                    district: district,
+                    mandal: mandal,
+                    complaint: complaint,
+                    number: randomNumber
+                });
+    
+                window.location.href = `randomnum.html?${params.toString()}`;
+            }
+        </script>
+    </head>
+    <body>
+        <h2 style="text-align: center;color:rgb(69, 164, 202)">WELCOME TO GRIEVANCE PORTAL<br><font color="blue">ANDHRA PRADESH</font></h2>
+        <div class="container">
+            <div class="bgimg"></div>
+            <div class="bgtext">
+                <form onsubmit="generateAndNavigate(event)">
+                    <h2 style="color:green;">
+                        <center>Enter Details of the officer</center>
+                    </h2>
+                    <p> 
+                        <label>Name <font color="red">*</font>:</label>
+                        <input type="text" id="Name" required>
+                    </p>
+                    <p>
+                        <label>Designation <font color="red">*</font>:</label>
+                        <input type="text" name="designation" required>
+                    </p>
+                    <p>
+                        <label>District <font color="red">*</font>:</label>
+                        <input type="text" name="district" required>
+                    </p>
+                    <p>
+                        <label>Mandal <font color="red">*</font>:</label>
+                        <input type="text" name="mandal" required>
+                    </p>
+                    <p>
+                        <label>Write your complaint <font color="red">*</font>:</label>
+                        <textarea rows="10" cols="50" placeholder="Enter complaint" required></textarea>
+                    </p>
+                    <div class="button-group">
+                        <button type="submit">SUBMIT</button>
+                        <button type="button" onclick="window.location.href = 'index.html';">HOME</button>
+                    </div>
+                    </p>
+                </form>
+                
+            </div>
+        </div>
+    </body>
+</html>
