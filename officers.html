@@ -1,13 +1,99 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/3/37/Emblem_of_Andhra_Pradesh.svg" type="image/icon type">
-        <title>
-            Login
-        </title>
-    </head>
-    <body>
-        <h1 style="text-align:center;color:royalblue">WELCOME TO GRIEVANCE PORTAL<br><font color="darkblue">ANDHRA  PRADESH</font></h1>
-        <center><button type="submit" onclick="window.location.href = 'index.html';">HOME</button></center>
-    </body>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/3/37/Emblem_of_Andhra_Pradesh.svg5" type="image/icon type">
+    <style>
+        body {
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url("https://assets.zeezest.com/blogs/PROD_Stupa%20Banner_1687628870038.png");
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(251, 253, 253);
+            mix-blend-mode: difference; 
+            margin: 0;
+        }
+        h2{
+            text-align: center;
+            color: rgb(7, 67, 87);
+            margin: 0;
+        }
+        #cont {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            background-color:inherit;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            backdrop-filter: blur(7px);
+            mix-blend-mode:hard-light;
+        }
+        .img {
+            background-image: url("Indian.png");
+            width: 100%;
+            height: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-bottom: 10px;
+        }
+        .txt {
+            text-align: center;
+            width: 100%;
+        }
+        button {
+            width: 100%;
+            max-width: 150px;
+            height: 35px;
+            border-radius: 7px;
+            margin: 10px 0;
+            background-color:inherit;
+            backdrop-filter: blur(7px);
+            position: relative;
+            z-index: 1;
+            color: rgb(218, 239, 252);
+            font-size: 16px;
+            font-weight: 90px;
+        }
+        input[type=text]
+        {
+            max-width: 300px;
+            border-radius: 7px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bb">
+    <div id="cont">
+        <h1>WELCOME TO GRIEVANCE PORTAL<br>ANDHRA PRADESH</h1>
+        <h2>OFFICERS LOGIN</h2>
+        <div class="img"></div>
+        <div class="txt">
+            <form>
+                <p><font color="white">Enter Your Identification Number</font></font><font color="red">*</font></p>
+                <p><input type="text" placeholder="Enter number" required></p>
+                <br>
+                <p>
+                    <button type="button" onclick="window.location.href = 'track1.html';">SUBMIT</button>
+                    <button type="button" onclick="window.location.href = 'index.html';">HOME</button>
+                </p>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
 </html>
